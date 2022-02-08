@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <title>Stack UI Design</title>
+    <link rel="stylesheet" href="stylesheet-stackUI.css">
+    <script>
+        class Stack {
+            constructor() {
+                this.items = [];
+            }
+            pushOperation() {
+                var element = parseInt(prompt("Enter the number you want to push on stack"));
+                this.items.push(element);
+            }
+            popOperation() {
+                if (this.items.length == 0) {
+                    alert("UnderFlow");
+
+                }
+                return this.items.pop();
+            }
+            peekInStack() {
+                if (this.items.length == 0) {
+                    document.getElementById("peekStack").innerHTML = alert("Stack is Empty,Can't determine Top element");
+                }
+                else {
+                    var peek = this.items[this.items.length - 1];
+                    document.getElementById("peekStack").innerHTML = peek;
+                }
+
+            }
+            checkForEmpty() {
+                var yesNostr = "";
+                if (this.items.length == 0) {
+                    yesNostr = "Yes";
+                }
+                else
+                    yesNostr = "No";
+                document.getElementById("checkEmpty").innerHTML = yesNostr;
+            }
+            displayStack() {
+                var str = "";
+                for (let i = 0; i < this.items.length; i++) {
+                    str += this.items[i] + " ";
+                }
+                // return str;
+                document.getElementById("displayStack").innerHTML = str;
+            }
+        }
+        var stack = new Stack();
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Implementation of Stack</h1>
+    <br>
+    <fieldset id="first-fieldset">
+        <legend>Operations of Stack</legend>
+        <fieldset class="push-pop">
+            <legend>To Push</legend>
+            <input type="button" onclick="stack.pushOperation()" value="Push Element" class="button">
+        </fieldset>
+        <fieldset class="push-pop">
+            <input type="button" onclick="stack.popOperation()" value="Pop Element" class="button">
+            <legend>To Pop</legend>
+        </fieldset>
+        <br>
+        <fieldset class="operation-block">
+            <legend>To display Stack</legend>
+            <input type="button" onclick="stack.displayStack()" value="Display" class="button">
+            <section id="displayArea">
+                <p class="first-para">The stack is:</p>
+                <p id="displayStack" class="toviewBlock">The stack will appear here</p>
+            </section>
+
+        </fieldset>
+        <fieldset class="operation-block">
+            <legend>To find Top</legend>
+            <input type="button" onclick="stack.peekInStack()" value="Peek Stack" class="button">
+            <section id="peekArea">
+                <p class="first-para">The Top element is:</p>
+                <p id="peekStack" class="toviewBlock">Top element will appear here</p>
+            </section>
+        </fieldset>
+        <fieldset class="operation-block">
+            <legend>To Check for empty stack</legend>
+            <input type="button" onclick="stack.checkForEmpty()" value="Check" class="button">
+            <section id="isEmptyArea">
+                <p class="first-para">Is stack empty:</p>
+                <p id="checkEmpty" class="toviewBlock">Yes/No will appear here</p>
+            </section>
+        </fieldset>
+
+
+    </fieldset>
+
+
+</body>
+
+</html>

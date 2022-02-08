@@ -1,0 +1,45 @@
+h1{
+    color:greenyellow;
+    background-color: orange;
+    width: 380px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 590px;
+    margin-top: 20px;
+}
+.push-pop{
+    width: 200px;
+    display: inline;
+    margin-left: 340px;
+}
+fieldset{
+    background-color: rgba(122, 102, 102, 0.7);
+    margin: 15px;
+}
+legend{
+    background-color: cyan;
+}
+.button{
+    background-color: red;
+}
+.toviewBlock{
+    border: 1px green solid;
+    width: 220px;
+    color: rgba(62, 81, 133, 0.7);
+}
+.button:hover{
+    background-color: pink;
+}
+.operation-block{
+    width: 410px;
+    display: inline-block;
+    margin-left: 25px;
+    background-color: white;
+}
+.first-para{
+    color: blue;
+}
+/* #first-fieldset{
+    margin-top: 20px;
+} */
